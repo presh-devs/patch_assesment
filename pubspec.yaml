@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.7.0
   http: ^1.2.2
+  pretty_dio_logger: ^1.4.0
+  provider: ^6.1.2
 
 
 dev_dependencies:

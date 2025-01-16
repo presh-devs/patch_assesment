@@ -1,6 +1,5 @@
-
 import 'package:dio/dio.dart';
-
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 abstract class BaseApiService {
   static const String baseUrl = 'https://fakestoreapi.com';
@@ -9,14 +8,16 @@ abstract class BaseApiService {
 }
 
 class ApiService extends BaseApiService {
-  final   Dio _dio =Dio();
-  
+  final Dio _dio = Dio(BaseOptions(
+      baseUrl: BaseApiService.baseUrl, responseType: ResponseType.json))
+    ..interceptors.add(PrettyDioLogger(requestHeader: true, requestBody: true));
+
   @override
-  Future<dynamic> getResponse(String url, ) async {
-    await Future.delayed(Duration(seconds: 2));
+  Future<dynamic> getResponse(String url, {int? limit}) async {
     try {
-      final response = await _dio.get(BaseApiService.baseUrl + url, data: {
-        'limit': 50,
+      final response =
+          await _dio.get(BaseApiService.baseUrl + url, queryParameters: {
+        'limit': limit,
       });
       if (response.statusCode == 200) {
         return response.data;
