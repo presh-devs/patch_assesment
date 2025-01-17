@@ -1,7 +1,7 @@
-import 'package:flutter/foundation.dart';
-import 'package:patch_assesment/home/model/category.dart';
-import 'package:patch_assesment/home/model/product.dart';
-import 'package:patch_assesment/home/model/services/api_service.dart';
+
+import 'package:patch_assesment/features/home/model/category.dart';
+import 'package:patch_assesment/features/home/model/product.dart';
+import 'package:patch_assesment/features/home/model/services/api_service.dart';
 
 class ProductService {
   final ApiService _apiService = ApiService();

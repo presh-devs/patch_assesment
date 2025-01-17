@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:patch_assesment/home/view/discover.dart';
-import 'package:patch_assesment/home/view_model/products_view_model.dart';
+import 'package:patch_assesment/core/theme/app_theme.dart';
+import 'package:patch_assesment/features/home/view/home.dart';
+import 'package:patch_assesment/features/home/view_model/products_view_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,14 +18,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Pacth Assesment',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const DiscoverPage(),
+      theme: AppTheme.themeData,
+      home: const Home(),
     );
   }
 }
