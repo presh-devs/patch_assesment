@@ -1,4 +1,4 @@
-# [Application Name] Documentation
+# [Patch Assessment] Documentation
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -66,19 +66,39 @@ dependencies:
 
 ## Setup Instructions
 ### Prerequisites
-- Flutter SDK version ^3.5.3
-- Required tools and software
+1. Install Flutter SDK
+    - Download Flutter SDK from flutter.dev
+    - Add Flutter to your system PATH
+    - Run flutter doctor to verify installation and dependencies
+
+
+2. Install Development Tools (skip if development tools already installed)
+    - Install Android Studio (for Android development)
+    - Install Xcode (for iOS development, Mac only)
+    - Install VS Code or your preferred IDE
+    - Install Flutter and Dart plugins for your IDE
 
 ### Installation Steps
 1. Clone repository
-2. Install dependencies
-3. Run the application
+    # Using HTTPS
+    git clone https://github.com/presh-devs/patch_assesment
 
-### Environment Variables
-```
-API_BASE_URL=
-API_KEY=
-```
+# Navigate to project directory
+    cd patch_assessment
+
+2. Install Dependecies
+    # Get all packages specified in pubspec.yaml
+    flutter pub get
+
+    # If using FVM (Flutter Version Management)
+    fvm flutter pub get
+
+3. Run the application
+    # Run on default device
+    flutter run
+
+    # Run on specific device
+    flutter run -d <device-id>
 
 ## Features
 ### Current Features
@@ -91,11 +111,6 @@ API_KEY=
 - Base URL = [text](https://fakestoreapi.com/)
 - Authentication method : none
 
-
-### Network Layer
-- HTTP client configuration
-- Error handling
-- Response models
 
 ## Assets
 ### Resources
