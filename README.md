@@ -1,4 +1,4 @@
-# [Patch Assessment] Documentation
+# Patch Assessment Documentation
 
 ## Table of Contents
 1. [Overview](#overview)
